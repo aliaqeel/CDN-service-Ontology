@@ -1,0 +1,24 @@
+There are 3 microservices that are made in this task.
+
+1. Load Balancer Microservice: Distributes incoming network traffic among several servers or resources to provide optimum utilization, enhanced performance, and high availability.
+
+The subsequent role of LoadBalancer Microservice is: 
+- distributes network traffic for incoming traffic request, and log data transmission traffic and cached content delivery traffic.
+
+2. Cache Server Microservice: The main function is to quickly and effectively store and serve material and data that is often accessed. By minimizing the need to retrieve information from slower and more resource-intensive sources, cache servers play a significant role in enhancing the performance and responsiveness of applications and services. 
+
+The subsequent role of CachedServer Microservice is:
+
+- uses data source of content database, and cached content repository.
+-generates network traffic of cached content delivery traffic.
+
+
+3. Logging Service Microservice:  It is essential for preserving the performance, security, and dependability of applications and services.
+
+The subsequent role of the Logging Service Microservice are:
+- generates network traffic for incoming traffic request, and log data transmission traffic.
+- uses data of source of log database.
+- applies access control policies to admin, and consumer (the application user)
+- it enforces security policies like advanced, basic and strict security policies.
+
+Notes: the ontology is present in file which is named "CDN Service". 

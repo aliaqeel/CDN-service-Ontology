@@ -1,0 +1,1230 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#accessesContentFromDataSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#accessesContentFromDataSource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:comment>Indicates the data sources from which the application consumer retrieves content. This property represents the origin of content.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#appliesAccessControlPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#appliesAccessControlPolicy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:comment>Connects the CDN service with access control policies.</rdfs:comment>
+        <rdfs:comment>Indicates the access control policy applied by the microservice. This property specifies who can access the microservice and its resources.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#appliesToMicroservice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#appliesToMicroservice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:comment>inks the access control policy to the microservices it applies to. This property indicates which services are subject to the policy.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#associatedWithMicroservice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#associatedWithMicroservice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:comment>Links the network traffic and load to the specific microservice that generates it. This property indicates the source of the traffic and load.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deployedInContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deployedInContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:comment>Specifies the deployment context of a microservice.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#distributesNetworkTraffic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#distributesNetworkTraffic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <rdfs:comment>distributes network traffic for incoming traffic request, and log data transmission traffic and cached content delivery traffic.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#enforcedBySecurityPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#enforcedBySecurityPolicy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:comment>Connects the access control policy to the security policy that enforces it. This property indicates the security measures applied to access control.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#enforcesSecurityPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#enforcesSecurityPolicy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:comment>Connects the microservice to the security policy it enforces. This property indicates the security measures implemented by the microservice.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#followsAccessControlPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#followsAccessControlPolicy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:comment>: Indicates the access control policies that the application consumer must adhere to when accessing resources.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#generatesNetworkTraffic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#generatesNetworkTraffic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <rdfs:comment>Captures the network traffic and load generated by microservices.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#grantsAccessToConsumer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#grantsAccessToConsumer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:comment>Connects the access control policy to the application consumers it grants access to. This property specifies the consumers authorized by the policy.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#hasAssociatedMicroservice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#hasAssociatedMicroservice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:comment>Connects the deployment context to the microservice that is deployed within it. This property indicates which microservices operate in a specific deployment context.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#hasMicroservice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#hasMicroservice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:comment>Indicates the microservices associated with a CDN service.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#interactsWithCDN -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#interactsWithCDN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#isDeployedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#isDeployedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:comment>Specifies the deployment context in which the CDN service operates. This property links the service to its deployment environment.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#isEnforcedByMicroservice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#isEnforcedByMicroservice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:comment>Represents the microservice that enforces the security policy. This object property connects a security policy to the specific microservice responsible for implementing its security measures.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#isEnforcedOnDataSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#isEnforcedOnDataSource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:comment>Indicates the data source on which the security policy is enforced. For example, a security policy may define encryption requirements for a specific data source containing sensitive information.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#providesContentTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#providesContentTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:comment>Indicates the application consumers that receive content from the CDN service. This property represents content delivery targets.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#providesServiceTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#providesServiceTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:comment>Connects the microservice to the application consumers (users, devices, systems) it provides services to.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#requiresEncryptionForCommunicationWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#requiresEncryptionForCommunicationWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:comment>Indicates the microservice with which encrypted communication is required when interacting with resources protected by the security policy.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#requiresSecurityPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#requiresSecurityPolicy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:comment>Links the application consumer to the security policies it must adhere to. This property represents the security measures applied to the consumer.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#servesConsumer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#servesConsumer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:comment>Establishes the relationship between the CDN service and its consumers.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#supportsContentDeliveryTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#supportsContentDeliveryTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:comment>Indicates that the microservice supports content delivery to specific application consumers.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#usedByMicroservice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#usedByMicroservice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:comment>Connects the data source to the microservice that uses it. This property indicates which microservices interact with the data source.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#usesDataSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#usesDataSource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:comment>Represents the data sources utilized by microservices.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#accessRightsLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#accessRightsLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the level of access rights granted to the application consumer (e.g., admin, regular user).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#averageLatency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#averageLatency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Indicates the average latency or delay experienced by network traffic, typically measured in milliseconds.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#consumerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#consumerName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the name or identifier of the application consumer.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#consumerType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#consumerType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the type or category of the application consumer (e.g., user, device, system).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#contactEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#contactEmail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#contentDeliveryNetwork -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#contentDeliveryNetwork">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Provides the name or identifier of the content delivery network associated with the service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#contextDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#contextDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Provides a description of the deployment context, explaining its purpose and characteristics.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#contextName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#contextName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the name or identifier of the deployment context.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourceAccessLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourceAccessLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the level of access granted to users or systems for the data source.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourceLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourceLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the geographic location or region where the data source is located.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourceName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Provides a description of the data source, explaining its content and purpose.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourcePrivacyLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourcePrivacyLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourceType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#dataSourceType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the type or category of the data source (e.g., database, content repository).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentEndDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Specifies the date when the deployment context is scheduled to be ended or deactivated.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentEnvironment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentEnvironment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the type of environment where the deployment context operates (e.g., cloud, edge, on-premises).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentStartDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Indicates the date when the deployment context was started or activated.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#deploymentStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the operational status of the deployment context (e.g., active, maintenance, offline).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#lastLoginDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#lastLoginDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Records the date and time of the application consumer&apos;s last login</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#loadBalancingStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#loadBalancingStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the status of load balancing mechanisms in managing network traffic.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceDependencies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceDependencies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Lists the dependencies (e.g., other microservices, libraries) of the microservice.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Provides a description of the microservice, explaining its functionality and purpose.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the name or identifier of the microservice.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#microserviceVersion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the version or release of the microservice.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#networkUtilization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#networkUtilization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Represents the level of network utilization, often measured as a percentage of available bandwidth.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyCreationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Indicates the date when the security policy was created.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Provides a description of the security policy, explaining its purpose and scope.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyEnforcementLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyEnforcementLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the level at which the security policy is enforced (e.g., application, network, endpoint).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyLastModifiedDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyLastModifiedDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Records the most recent date when the security policy was modified.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the operational status of the security policy (e.g., active, inactive).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#policyType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the type or category of the security policy (e.g., authentication, encryption).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceCreationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the date when the CDN service was created.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Provides a description of the CDN service, explaining its purpose and functionality.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceLastModifiedDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceLastModifiedDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Records the most recent date when the CDN service was modified.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the name or identifier of the CDN service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceOwner -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceOwner">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the individual or entity responsible for managing and operating the CDN service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceProvider -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceProvider">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the organization or entity responsible for providing the CDN service.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the operational status of the CDN service (e.g., active, maintenance, offline).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the URL or endpoint through which the CDN service can be accessed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#serviceVersion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#trafficType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#trafficType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Indicates the type of network traffic (e.g., HTTP, HTTPS, streaming) being monitored or measured.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#trafficVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#trafficVolume">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Specifies the volume of network traffic, typically measured in bytes or packets.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#userAgent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#userAgent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Represents the user agent string associated with the application consumer&apos;s client, such as a web browser or mobile app.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#Microservice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdminAccessPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdminAccessPolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdvancedSecurityPolicy"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#BasicSecurityPolicy"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#StrictSecurityPolicy"/>
+        <untitled-ontology-5:grantsAccessToConsumer rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#EndUser1"/>
+        <untitled-ontology-5:consumerName></untitled-ontology-5:consumerName>
+        <untitled-ontology-5:consumerType></untitled-ontology-5:consumerType>
+        <untitled-ontology-5:contactEmail></untitled-ontology-5:contactEmail>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyStatus></untitled-ontology-5:policyStatus>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdvancedSecurityPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdvancedSecurityPolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdminAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ConsumerAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#RestrictedAccessPolicy"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:isEnforcedOnDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentRepository"/>
+        <untitled-ontology-5:isEnforcedOnDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ContentDatabase"/>
+        <untitled-ontology-5:microserviceDependencies></untitled-ontology-5:microserviceDependencies>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyStatus></untitled-ontology-5:policyStatus>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#BasicSecurityPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#BasicSecurityPolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdminAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ConsumerAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#RestrictedAccessPolicy"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceDependencies></untitled-ontology-5:microserviceDependencies>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyStatus></untitled-ontology-5:policyStatus>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServer"/>
+        <untitled-ontology-5:deployedInContext rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CentralizedLoggingSystem"/>
+        <untitled-ontology-5:deployedInContext rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CloudEnvironment"/>
+        <untitled-ontology-5:generatesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentDeliveryTraffic"/>
+        <untitled-ontology-5:usesDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentRepository"/>
+        <untitled-ontology-5:usesDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ContentDatabase"/>
+        <untitled-ontology-5:dataSourceName></untitled-ontology-5:dataSourceName>
+        <untitled-ontology-5:dataSourceType></untitled-ontology-5:dataSourceType>
+        <untitled-ontology-5:deploymentEnvironment></untitled-ontology-5:deploymentEnvironment>
+        <untitled-ontology-5:deploymentLocation></untitled-ontology-5:deploymentLocation>
+        <untitled-ontology-5:deploymentStatus></untitled-ontology-5:deploymentStatus>
+        <untitled-ontology-5:networkUtilization></untitled-ontology-5:networkUtilization>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentDeliveryTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentDeliveryTraffic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceDependencies></untitled-ontology-5:microserviceDependencies>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentRepository -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentRepository">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceDependencies></untitled-ontology-5:microserviceDependencies>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CentralizedLoggingSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CentralizedLoggingSystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <untitled-ontology-5:hasAssociatedMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:hasAssociatedMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:hasAssociatedMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceDependencies></untitled-ontology-5:microserviceDependencies>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CloudEnvironment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CloudEnvironment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DeploymentContext"/>
+        <untitled-ontology-5:distributesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#IncomingRequestsTraffic"/>
+        <untitled-ontology-5:distributesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataTransmissionTraffic"/>
+        <untitled-ontology-5:hasAssociatedMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:hasAssociatedMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:hasAssociatedMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceDependencies></untitled-ontology-5:microserviceDependencies>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+        <untitled-ontology-5:networkUtilization></untitled-ontology-5:networkUtilization>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ConsumerAccessPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ConsumerAccessPolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdvancedSecurityPolicy"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#BasicSecurityPolicy"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#StrictSecurityPolicy"/>
+        <untitled-ontology-5:grantsAccessToConsumer rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#EndUser1"/>
+        <untitled-ontology-5:consumerName></untitled-ontology-5:consumerName>
+        <untitled-ontology-5:consumerType></untitled-ontology-5:consumerType>
+        <untitled-ontology-5:contactEmail></untitled-ontology-5:contactEmail>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyStatus></untitled-ontology-5:policyStatus>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ContentDatabase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ContentDatabase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#EndUser1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#EndUser1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ApplicationConsumer"/>
+        <untitled-ontology-5:accessesContentFromDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentRepository"/>
+        <untitled-ontology-5:accessesContentFromDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ContentDatabase"/>
+        <untitled-ontology-5:accessesContentFromDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataStorage"/>
+        <untitled-ontology-5:followsAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdminAccessPolicy"/>
+        <untitled-ontology-5:followsAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ConsumerAccessPolicy"/>
+        <untitled-ontology-5:followsAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#RestrictedAccessPolicy"/>
+        <untitled-ontology-5:generatesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentDeliveryTraffic"/>
+        <untitled-ontology-5:interactsWithCDN rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#MyCDNService"/>
+        <untitled-ontology-5:dataSourceAccessLevel></untitled-ontology-5:dataSourceAccessLevel>
+        <untitled-ontology-5:dataSourceLocation></untitled-ontology-5:dataSourceLocation>
+        <untitled-ontology-5:dataSourceName></untitled-ontology-5:dataSourceName>
+        <untitled-ontology-5:dataSourcePrivacyLevel></untitled-ontology-5:dataSourcePrivacyLevel>
+        <untitled-ontology-5:dataSourceType></untitled-ontology-5:dataSourceType>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+        <untitled-ontology-5:serviceName></untitled-ontology-5:serviceName>
+        <untitled-ontology-5:serviceStatus></untitled-ontology-5:serviceStatus>
+        <untitled-ontology-5:serviceURL></untitled-ontology-5:serviceURL>
+        <untitled-ontology-5:serviceVersion></untitled-ontology-5:serviceVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#IncomingRequestsTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#IncomingRequestsTraffic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancer"/>
+        <untitled-ontology-5:deployedInContext rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CentralizedLoggingSystem"/>
+        <untitled-ontology-5:deployedInContext rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CloudEnvironment"/>
+        <untitled-ontology-5:distributesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CachedContentDeliveryTraffic"/>
+        <untitled-ontology-5:generatesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#IncomingRequestsTraffic"/>
+        <untitled-ontology-5:generatesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataTransmissionTraffic"/>
+        <untitled-ontology-5:usesDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ContentDatabase"/>
+        <untitled-ontology-5:dataSourceName></untitled-ontology-5:dataSourceName>
+        <untitled-ontology-5:dataSourceType></untitled-ontology-5:dataSourceType>
+        <untitled-ontology-5:deploymentEnvironment></untitled-ontology-5:deploymentEnvironment>
+        <untitled-ontology-5:deploymentLocation></untitled-ontology-5:deploymentLocation>
+        <untitled-ontology-5:deploymentStatus></untitled-ontology-5:deploymentStatus>
+        <untitled-ontology-5:networkUtilization></untitled-ontology-5:networkUtilization>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyStatus></untitled-ontology-5:policyStatus>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataStorage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataStorage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#DataSource"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:usedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataTransmissionTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataTransmissionTraffic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#NetworkTrafficAndLoad"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:associatedWithMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingService"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdminAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ConsumerAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#RestrictedAccessPolicy"/>
+        <untitled-ontology-5:deployedInContext rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CentralizedLoggingSystem"/>
+        <untitled-ontology-5:deployedInContext rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CloudEnvironment"/>
+        <untitled-ontology-5:enforcesSecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdvancedSecurityPolicy"/>
+        <untitled-ontology-5:enforcesSecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#StrictSecurityPolicy"/>
+        <untitled-ontology-5:generatesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#IncomingRequestsTraffic"/>
+        <untitled-ontology-5:generatesNetworkTraffic rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataTransmissionTraffic"/>
+        <untitled-ontology-5:usesDataSource rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LogDataStorage"/>
+        <untitled-ontology-5:consumerName></untitled-ontology-5:consumerName>
+        <untitled-ontology-5:consumerType></untitled-ontology-5:consumerType>
+        <untitled-ontology-5:contactEmail></untitled-ontology-5:contactEmail>
+        <untitled-ontology-5:dataSourceLocation></untitled-ontology-5:dataSourceLocation>
+        <untitled-ontology-5:dataSourceName></untitled-ontology-5:dataSourceName>
+        <untitled-ontology-5:dataSourceType></untitled-ontology-5:dataSourceType>
+        <untitled-ontology-5:deploymentEnvironment></untitled-ontology-5:deploymentEnvironment>
+        <untitled-ontology-5:deploymentStatus></untitled-ontology-5:deploymentStatus>
+        <untitled-ontology-5:networkUtilization></untitled-ontology-5:networkUtilization>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyStatus></untitled-ontology-5:policyStatus>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#MyCDNService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#MyCDNService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CDNService"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdminAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ConsumerAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#RestrictedAccessPolicy"/>
+        <untitled-ontology-5:enforcesSecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdvancedSecurityPolicy"/>
+        <untitled-ontology-5:enforcesSecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#BasicSecurityPolicy"/>
+        <untitled-ontology-5:enforcesSecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#StrictSecurityPolicy"/>
+        <untitled-ontology-5:hasMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:hasMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:hasMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:isDeployedIn rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CentralizedLoggingSystem"/>
+        <untitled-ontology-5:isDeployedIn rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CloudEnvironment"/>
+        <untitled-ontology-5:deploymentEnvironment></untitled-ontology-5:deploymentEnvironment>
+        <untitled-ontology-5:deploymentLocation></untitled-ontology-5:deploymentLocation>
+        <untitled-ontology-5:deploymentStatus></untitled-ontology-5:deploymentStatus>
+        <untitled-ontology-5:microserviceDependencies></untitled-ontology-5:microserviceDependencies>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyStatus></untitled-ontology-5:policyStatus>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#RestrictedAccessPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#RestrictedAccessPolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AccessControlPolicy"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:appliesToMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdvancedSecurityPolicy"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#BasicSecurityPolicy"/>
+        <untitled-ontology-5:enforcedBySecurityPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#StrictSecurityPolicy"/>
+        <untitled-ontology-5:grantsAccessToConsumer rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#EndUser1"/>
+        <untitled-ontology-5:consumerName></untitled-ontology-5:consumerName>
+        <untitled-ontology-5:consumerType></untitled-ontology-5:consumerType>
+        <untitled-ontology-5:contactEmail></untitled-ontology-5:contactEmail>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#StrictSecurityPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#StrictSecurityPolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#SecurityPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#AdminAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#ConsumerAccessPolicy"/>
+        <untitled-ontology-5:appliesAccessControlPolicy rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#RestrictedAccessPolicy"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#CacheServerMicroservice"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoadBalancerMicroservice"/>
+        <untitled-ontology-5:isEnforcedByMicroservice rdf:resource="http://www.semanticweb.org/aliaqeelzafar/ontologies/2023/7/untitled-ontology-5#LoggingServiceMicroservice"/>
+        <untitled-ontology-5:microserviceDependencies></untitled-ontology-5:microserviceDependencies>
+        <untitled-ontology-5:microserviceName></untitled-ontology-5:microserviceName>
+        <untitled-ontology-5:microserviceType></untitled-ontology-5:microserviceType>
+        <untitled-ontology-5:microserviceVersion></untitled-ontology-5:microserviceVersion>
+        <untitled-ontology-5:policyEnforcementLevel></untitled-ontology-5:policyEnforcementLevel>
+        <untitled-ontology-5:policyName></untitled-ontology-5:policyName>
+        <untitled-ontology-5:policyStatus></untitled-ontology-5:policyStatus>
+        <untitled-ontology-5:policyType></untitled-ontology-5:policyType>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
